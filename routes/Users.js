@@ -1,4 +1,5 @@
 import express from 'express';
+import { createUser } from '../controllers/Users'
 
 const router = express.router()
 
