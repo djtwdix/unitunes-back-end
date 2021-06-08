@@ -8,6 +8,7 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
+    "@prisma/client": "^2.24.1",
     "bcrypt": "^5.0.1",
     "cookie-sessions": "^0.0.2",
     "cors": "^2.8.5",

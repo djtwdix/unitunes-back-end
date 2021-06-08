@@ -1,9 +1,21 @@
-import { PrismaClient } from "@prisma/client";
+import pkg from "@prisma/client";
+const { PrismaClient } = pkg;
 
 const prisma = new PrismaClient();
-
-export const createUser = (req, res) => {
-  prisma.user.create({
-    data: req.body,
-  });
+export const createUser = async (req, res) => {
+  console.log(req.body);
+  console.log("requested");
+  await prisma.user.create(
+    {
+      data: req.body,
+    });
 };
+
+/* main()
+  .catch((e) => {
+    throw e;
+  })
+
+  .finally(async () => {
+    await prisma.$disconnect();
+  }); */
